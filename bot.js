@@ -14,6 +14,7 @@ bot.on("message", msg => {
     const message= `Hello ${name}! Welcome to MUON. A decentralized optimistic oracle network. Making messaging & secure data interfacing possible: on-chain, off-chain & cross-chain! `;
 
     try {
+    setTimeout(()=> {
     bot.sendMessage(chatId, message, {
       "reply_markup": {
         "inline_keyboard": [
@@ -52,8 +53,8 @@ bot.on("message", msg => {
           ],
         ]}}).then((x)=>setTimeout(()=>{
             {bot.deleteMessage(chatId,x.message_id)} 
-          },20000))
-      }
+          },30000))
+      },30000)}
       catch (err) {
         console.log(err)
       }        

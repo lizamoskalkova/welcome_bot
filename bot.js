@@ -8,7 +8,7 @@ bot.on("message", msg => {
   console.log(msg)
   const opts = { reply_to_message_id: msg.message_id };
   const { first_name, last_name, username } = msg.new_chat_member;
-  const name = username ? `@${username}` : `${first_name} ${last_name}`;
+  const name = username ? `@${username}` : `${first_name}`;
   let count = 0;
   if (msg.new_chat_participant) {
     const message= `Hello ${name}! Welcome to MUON. A decentralized optimistic oracle network. Making messaging & secure data interfacing possible: on-chain, off-chain & cross-chain! `;
